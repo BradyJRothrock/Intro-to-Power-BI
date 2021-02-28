@@ -6,10 +6,10 @@ Students in this course will be using a Windows Virtual Desktop to launch Power 
 
 In order to connect to your virtual desktop you will need to go to [http://VirtualDesktop.ku.edu](http://VirtualDesktop.ku.edu).
 
-<figure>
+<!-- <figure>
     <img src="images/100/1_WVD.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 1<figcaption>
-</figure>
+</figure> -->
 
 
 ## File Storage and Onedrive
