@@ -1,0 +1,28 @@
+{
+	"tutorials": [
+		{
+			"title": "Part 1: Getting Setup with Power BI on your Windows Virtual Desktop",
+			"description": "Getting Setup with Power BI on your Windows Virtual Desktop",
+			"partnumber": "Ennnnn_01",
+			"publisheddate": "02/18/2020",
+			"contentid": "12nnnn",
+			"filename": "LabGuide100.md"
+		},
+		{
+			"title": "Part 2: Basic Introduction to Core Features",
+			"description": "Basic Introduction to Core Features",
+			"partnumber": "Ennnnn_01",
+			"publisheddate": "02/18/2020",
+			"contentid": "12nnnn",
+			"filename": "LabGuide200.md"
+		},
+		{
+			"title": "Part 3: Creating and Customzing Visualizations",
+			"description": "Creating and Customzing Visualizations",
+			"partnumber": "Ennnnn_01",
+			"publisheddate": "02/18/2020",
+			"contentid": "12nnnn",
+			"filename": "LabGuide300.md"
+		}
+	]
+}
