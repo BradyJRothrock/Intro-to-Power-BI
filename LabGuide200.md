@@ -2,207 +2,178 @@
 
 This section focuses on getting started with Power BI and introducing you to the interface.
 
+With Power BI opened, a new blank report will be created unless a previously created Power BI report was opened. 
 
+## Ribbon
 
-<!-- ## Part 2 - Autonomous Database Startup Guide
-
-## Creating Autonomous Database
-
-1. Sign into your Cloud account and you will be presented with your dashboard. Select Create an Autonomous Data Warehouse database.
+Like all other Microsoft applications you will notice a **Tool Ribbon**, Figure 1 below, is included at the top of the screen. This will provide many useful functions and can be hidden by selecting the **Up Arrow**, Figure 2 below, in the bottom righ-hand corner of the ribbon.
 
 <figure>
-    <img src="images/200/1_adw.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/1_ribbon.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 1<figcaption>
 </figure>
 
-2. Enter a Display name as well as a Database name. Add a password to the Administrator Credentials section. Move the Always Free selector to the right.
-
-- Display Name: A user-friendly description or other information that helps you easily identify the resource. The display name does not have to be unique, and you can change it whenever you like. Avoid entering confidential information. Recommend using ADW+your initials + 01
-
-- Database Name: The database name must consist of letters and numbers only, starting with a letter. The maximum length is 14 characters. Avoid entering confidential information. You can use the same as Displayname without Spaces! 
-
-*I suggest that you give your database name that is easy to remember. I use something like BRADW01 where “BR” are my initials.*
-
 <figure>
-    <img src="images/200/2_db_names.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/2_minimize.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 2<figcaption>
 </figure>
 
-3. Verify the defaults for the remaining fields below.
+## Connect to Data
 
-- Workload Type: Data Warehousing
-
-- Deployment Type: Shared Infrastructure.
-
-- Always Free: Move this selector to the right so that the provisioning workflow shows only the Always Free
-configuration options. Note that the Core CPU count and Storage configuration fields are disabled when provisioning an Always Free Autonomous Database. Your database will have 1 OCPU, 8 GB of memory, and 20 GB of storage.
-
-*Note: if failing to select Always Free your credits will be charged*
+Every report requires a data source. As an employee of KoolKart, an e-Commerce company that sells 4 categories of products, you can import and connect to datasets to look for innovative ways to increase revenues. You have been provided with a spreadsheet with thousands of rows of information and are struggling to make heads or tails of what you are evaluating. Let’s import the **[KoolKart Sales Data.xlsx](https://bradyjrothrock.github.io/Oracle-Analytics-Cloud-Workshop/Exercise%20Files/KoolKart%20Sales%20Data.xlsx)** file to see what insights we can glean. This can be done through the **Data** section of the **Home** ribbon.
 
 <figure>
-    <img src="images/200/3_configuration.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/3_data.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 3<figcaption>
 </figure>
 
-- Administrator Credentials: Set the password for the Autonomous Database Admin user by entering a
-password that meets The USERNAME is always ADMIN – Remember this! the following criteria:
-  
-    1. Between 12 and 30 characters long
-    2. Contains at least one lowercase letter
-    3. Contains at least one uppercase letter
-    4. Contains at least one number
-    5. Does not contain the double quotation mark (")
-    6. Does not contain the string "admin", regardless of casing
-
-Use this password when accessing the Autonomous Database service console and when using an SQL client tool. WRITE THIS DOWN ALONG WITH THE USER NAME --- YOU WILL USE THIS A LOT!!!
+You will notice there are icons for standards Microsoft data sources. Additionally, under the **Get data** icon you will see the long list of acceptable files types and a the option **More** to access dozens of different data sources.
 
 <figure>
-    <img src="images/200/4_admin.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/4_common.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 4<figcaption>
 </figure>
 
-- License Type: When you provision an Always Free Autonomous Database, the license type is set to License included and cannot be adjusted.
-
-- Advanced Options
-
-Tags: Optionally, you can apply tags. If you have permissions to create a resource, you also have permissions to apply free- form tags to that resource. To apply a defined tag, you must have permissions to use the tag namespace. For more information about tagging, see Resource Tags. If you are not sure if you should apply tags, skip this option (you can apply tags later) or ask your administrator. Avoid entering confidential information.
-
-4. Click **Create Autonomous Data Warehous Database**.
-
 <figure>
-    <img src="images/200/5_create_adw.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/5_more_sources.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 5<figcaption>
 </figure>
 
-5. It may take several minutes for your database to be provisioned, while this is happening you will see this screen :
+Select **Excel** and navigate to the **[KoolKart Sales Data.xlsx](https://bradyjrothrock.github.io/Oracle-Analytics-Cloud-Workshop/Exercise%20Files/KoolKart%20Sales%20Data.xlsx)** file.
 
 <figure>
-    <img src="images/200/6_provisioning.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/6_koolkart_sales.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 6<figcaption>
 </figure>
 
-6. When this process is completed, you will now see the state set to available. This means that your database instance is created.
+Select **Sheet1** to preview the data. At this point we can **Load** the table or **Transform Data** to make changres to the file before loading. 
 
 <figure>
-    <img src="images/200/7_available.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/7_sheet1.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 7<figcaption>
 </figure>
 
-7. Now that the database is running you should create the Wallet file which you will need to login using SQLDeveloper Desktop and Oracle Analytics (Cloud and Desktop)
-
-8. You now have a live database server!
-At any point you can sign in to your Cloud account and return to your database by using the hamburger icon in the top left corner and selecting Autonomous Data Warehouse.
+Select **Transform Data** and you will be brought to the **Power Query Editor**. Here you can wrangle your data and peform necessary transformations. You can see each of the steps applied in the **Query Settings** pane on the right. 
 
 <figure>
-    <img src="images/200/8_select_adw.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/8_powerquery.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 8<figcaption>
 </figure>
 
-10. This will return you to your database page where you can select your live database.
+We can now shape our data. To do this we provide our Power Query Editor with rules for adjusting the data while loading and presenting it. This doesn't affect the original data source, only this project's view of the data.
+
+The system by default will determine the columns datatypes.
+
+>![](images/200/9_dimension.png " ") **Text**: Indicated by **ABC**, and are generally non-numeric fields.
+
+>![](images/200/9_measure.png " ") **Whole Number**: Indicated by **123**, and are generally numeric fields.
+
+>![](images/200/9_float.png " ") **Decimal Number**: Indicated by **1.2**, and are numeric fields with decimal values.
+
+>![](images/200/9_date.png " ") **Datetime**: Fields may also be indicated by a **Calendar** icon. These will be your date and time based fields, which can be handled differently in certain visualizations.
+
+Unlike Oracle Analytics Cloud (OAC), Power BI read our **Year** field in as a **Whole Number** instead of **Text** as it was defined in the Excel file. 
+
+To change this we can right-click on a field name, locate the **Change Type** menue and select which of the many type options we would like. Let's update the type to be **Text**.
 
 <figure>
-    <img src="images/200/9_available_dbs.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/9_to_text.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 9<figcaption>
 </figure>
 
-11. If you save a shortcut to go directly to this Cloud Database Page you will go through the typical Cloud Login process and then land on the Cloud Database Page listing your configured Database Instances.
-
-- When a database is open you can click on various things like **More Actions** to Start/Stop/Terminate, change Admin Password or use Apex. If you click on the **Tools** tab you'll find **SQL Developer Web**. You can also click on the DB Connection button to create wallet file to connect to ADW using SQLNet or other tools, like SQLDeveloper Desktop or Oracle Analytics Desktop which we will do later in the course.
-
-## Restarting your Autonomous Database if it has stopped due to inactivity:
-
-- If your Always Free Autonomous Database has no activity for a period of 7 consecutive days, the Database service will stop the database automatically. You will also get an email from Oracle when they automatically turn off your Database.
+You'll note that a box will pop-up asking if we would like to **Replace current** or to **Add new step**. This happens because Power BI already performed a transformation on the **Year** field converting it from **Text** to **Whole Number**. During the import step Power BI reads all fields in as **Text** and then selects a transformation based on the data structure.
 
 <figure>
-    <img src="images/200/10_db_paused.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/10_repalce_or_add.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 10<figcaption>
 </figure>
 
-- If this happens, you are allowed to restart the database and continue using it. If your Always Free Autonomous Database remains in a stopped state for 90 days, the resource will be reclaimed by the Database service.
-
-1. Go to the ADW instance page and restart the Database click the Start button in the **More Actions** drop down.
+Select **Add new step** and see that we see a new step called **Changed Type1**. 
 
 <figure>
-    <img src="images/200/11_start_db.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/11_add_step.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 11<figcaption>
 </figure>
 
-2. Confirm that you would like to start the database by clicking Start in the confirmation window.
-
-3. You will see a status of “Starting”
+If we instead selected **Replace current** it would update **Changed Type**. 
 
 <figure>
-    <img src="images/200/12_adw_starting.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/12_converted.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 12<figcaption>
 </figure>
 
-4. After a few moments the database status will change to “Available” and you are then free to continue use.
+There are two ways we can determine what all column types Power BI selected. You can visually inspect each and every field, or you can select **Advanced Editor** from the **Query** section of the ribbon.
 
 <figure>
-    <img src="images/200/7_available.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/13_advanced_editor.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 13<figcaption>
 </figure>
 
-
-## Downloaded wallet file and testing database:
-
-1. Click on the DB Connection Button (Tab) and select **Download Wallet**.
+After selected **Advanced Editor** we're presented with the **Power Query** that is being developed. This is similar to the **Preparation Script** in Oracle Analytics Cloud. Select **Display Options** and **Word Wrap** to make all of the code visible on the screen. You can now see in the code for **#"Changed Type"** the function **TransformColumnTypes()** and each of the column type selections. You can also edit the Power Query code but this is not recommended. 
 
 <figure>
-    <img src="images/200/13_wallet.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/14_power_query.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 14<figcaption>
 </figure>
 
-2. It will ask you to set a password and Download the file. Remember where you stored this wallet file you will need it later. 
-
-*FYI it will call the file with your Instance name + wallet.zip* 
-
-*Do not unzip this file as you will need it zipped to use*
+Now delete **Changed Type1** by clicking the **X** next to the step. Instead we will transform the field and update the current step. We will also at this time transform Quarter & Month back to **Text**. It is important that we do all of these transformations with **Replace current** to ensure we get the exact text string that was imported. If we choose to **Add a step** all of the new changes will be applied within this new step and will converted the transformed date values to string instead of the original values.
 
 <figure>
-    <img src="images/200/14_wallet_password.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/15_replace_current.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 15<figcaption>
 </figure>
 
-3. Close the **Database Connection** window and select the **Tools** tab and **Open SQL Developer Web**.
+Once we've completed all the transformations needed, select **Close & Apply**.
 
 <figure>
-    <img src="images/200/15_sqldeveloper_web.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/16_close_&_apply.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 16<figcaption>
 </figure>
 
-4. Enter the **Admin** credentials creating when intializing our Database.
+## Build Reports
+
+The **Report View** is where we can create our visualizations. The three different views selected on the left-hand side are **Report**, **Data**, & **Model**. 
 
 <figure>
-    <img src="images/200/16_sqldeveloper_web_login.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/17_report_view.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 17<figcaption>
 </figure>
 
-5. Click the blue buttons through the tool information tour.
+In the center of the screen is the **Canvas Area** whee visualizations are created and arranged.
 
 <figure>
-    <img src="images/200/17_tour.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
-    <figcaption style="text-align:center;">Figure 17<figcaption>
-</figure>
-
-5. Enter the following query into the **Worksheet** and click the green run button.
-
-```sql
-SELECT *
-FROM ALL_TABLES
-WHERE OWNER = 'SH'
-```
-
-<figure>
-    <img src="images/200/18_query.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/18_canvas.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 18<figcaption>
 </figure>
 
-6. You should see the following results. If you do not let me know immediately.
+On the right-hand side we have 3 panes. The panes from left to right are **Filters**, **Visualizations**, & **Fields**.
+
+The **Filters** pane is where you use fields and make selections to filter individual or multiple visualizations.
 
 <figure>
-    <img src="images/200/19_results.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; ">
+    <img src="images/200/19_filters.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
     <figcaption style="text-align:center;">Figure 19<figcaption>
 </figure>
 
-You have now successfully completed setting up your Free Education Account and intialization of your first Autonomous Data Warehouse. -->
+The **Visualzations** pane is where you can add, change, or customize visualizations, and apply drillthrough capabilities.
+
+<figure>
+    <img src="images/200/20_visualizations.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
+    <figcaption style="text-align:center;">Figure 20<figcaption>
+</figure>
+
+The **Fields** pane shows all the available fields and their data types. You can drag these onto the canvas and other panes to create or modify visualizations. 
+
+<figure>
+    <img src="images/200/21_fields.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
+    <figcaption style="text-align:center;">Figure 21<figcaption>
+</figure>
+
+You can expand and collapse the panes by selecting the arrows at the top of each pane. This allows you to customize the amount of space to build your visualizations.
+
+<figure>
+    <img src="images/200/22_arrows.png" style="text-align:center; display: block; margin-left: auto; margin-right: auto; " class="captions">
+    <figcaption style="text-align:center;">Figure 22<figcaption>
+</figure>
+
+[Part 3: Creating and Customizing Visualizations](/Intro-to-Power-BI/?lab=part-3-creating-customzing)
