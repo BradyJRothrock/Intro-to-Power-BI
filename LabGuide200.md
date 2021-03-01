@@ -176,4 +176,4 @@ You can expand and collapse the panes by selecting the arrows at the top of each
     <figcaption style="text-align:center;">Figure 22<figcaption>
 </figure>
 
-[Part 3: Creating and Customizing Visualizations](/Intro-to-Power-BI/?lab=part-3-creating-customzing)
+**[Part 3: Creating and Customizing Visualizations](/Intro-to-Power-BI/?lab=part-3-creating-customzing)**

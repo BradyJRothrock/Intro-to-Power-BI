@@ -79,4 +79,4 @@ After launching the application, you will be presented with the **Welcome Screen
     <figcaption style="text-align:center;">Figure 9<figcaption>
 </figure>
 
-[Part 2: Basic Introduction to Core Features](/Intro-to-Power-BI/?lab=part-2-basic-introduction-core-features)
+**[Part 2: Basic Introduction to Core Features](/Intro-to-Power-BI/?lab=part-2-basic-introduction-core-features)**
